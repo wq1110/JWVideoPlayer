@@ -8,3 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "JWVideoPlayer"
 include ':app'
+include ':jwVideoPlayer-java'
+include ':jwVideoPlayer-mvx'
+include ':jwVideoPlayer-lib'

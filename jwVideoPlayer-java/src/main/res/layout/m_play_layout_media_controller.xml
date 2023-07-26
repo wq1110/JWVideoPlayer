@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <FrameLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+    </FrameLayout>
+
+    <!--right box-->
+    <LinearLayout
+        android:id="@+id/layout_right_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/c_ui_sm_10"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/btn_orientation_lock"
+            android:layout_width="@dimen/c_ui_sm_24"
+            android:layout_height="@dimen/c_ui_sm_24"
+            android:src="@drawable/m_play_ic_lock"/>
+
+        <ImageView
+            android:id="@+id/btn_zoom"
+            android:layout_width="@dimen/c_ui_sm_24"
+            android:layout_height="@dimen/c_ui_sm_24"
+            android:layout_marginTop="@dimen/c_ui_sm_40"
+            android:src="@drawable/m_play_ic_zoom_in"/>
+
+    </LinearLayout>
+
+    <!--top box-->
+    <RelativeLayout
+        android:id="@+id/media_top_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include
+            layout="@layout/m_play_layout_media_controller_topbox"/>
+
+    </RelativeLayout>
+
+    <!--center box-->
+    <RelativeLayout
+        android:id="@+id/media_center_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <include
+            layout="@layout/m_play_layout_media_controller_centerbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <include
+            layout="@layout/m_play_layout_media_controller_loadingbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+
+        <include
+            layout="@layout/m_play_layout_media_controller_mobiledatatips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <!--bottom box-->
+    <LinearLayout
+        android:id="@+id/layout_bottom_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/media_next_episode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m_play_str_next_episode"
+            android:padding="@dimen/c_ui_sm_6"
+            android:textSize="@dimen/c_ui_font_size_26px"
+            android:textColor="@color/m_play_color_ffffff"
+            android:background="@drawable/m_play_bg_next_episode"
+            android:layout_marginEnd="@dimen/c_ui_sm_20"
+            android:layout_gravity="right"
+            android:visibility="gone"/>
+        <include
+            layout="@layout/m_play_layout_media_controller_bottombox" />
+    </LinearLayout>
+
+    <!--subtitles box-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom|center_horizontal"
+        android:layout_above="@+id/media_bottom_box"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/media_subtitles_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="#ff0"
+            android:layout_marginBottom="@dimen/c_ui_sm_10"
+            android:textSize="@dimen/c_ui_font_size_32px"/>
+    </LinearLayout>
+
+    <!-- 中间触摸提示-->
+    <include
+        layout="@layout/m_play_layout_simple_player_touch_gestures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

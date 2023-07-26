@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="m_play_str_use_mobile_data_tips">You are streaming on mobile data</string>
+    <string name="m_play_str_screen_locked">Screen rotation has been locked!</string>
+    <string name="m_play_str_next_episode">Next episode</string>
+    <string name="m_play_str_resources">Resources</string>
+    <string name="m_play_str_subtitles">Subtitles</string>
+    <string name="m_play_str_video">Episodes</string>
+</resources>

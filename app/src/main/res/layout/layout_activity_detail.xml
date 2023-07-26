@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="vodPlay"
+            type="com.media.jwvideoplayer.viewmodel.VodPlayViewModel" />
+
+        <variable
+            name="activity"
+            type="com.media.jwvideoplayer.ui.VodPlayActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/m_play_color_121212"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/layout_title_bar"
+            layout="@layout/m_play_layout_activity_common_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/c_ui_sm_58"/>
+
+        <FrameLayout
+            android:id="@+id/layout_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_title_bar">
+
+            <com.media.jwvideoplayer.player.ui.StandardVideoPlayer
+                android:id="@+id/vod_media_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/layout_vod_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_player"
+            android:orientation="vertical"
+            android:padding="@dimen/c_ui_sm_10"
+            android:visibility="gone">
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</layout>

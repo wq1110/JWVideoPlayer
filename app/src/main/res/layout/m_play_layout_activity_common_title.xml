@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/c_ui_sm_58"
+    android:background="#181818">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/c_ui_sm_24"
+        android:layout_height="@dimen/c_ui_sm_24"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/c_ui_sm_10"
+        android:background="@drawable/m_play_ic_detail_back" />
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_marginRight="@dimen/c_ui_sm_10"
+        android:layout_width="@dimen/c_ui_sm_24"
+        android:layout_height="@dimen/c_ui_sm_24"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/m_play_ic_share"
+        android:layout_centerVertical="true"/>
+
+    <!--    <com.cv.mobile.c.ui.textview.FontTextView-->
+    <!--        android:id="@+id/tv_title"-->
+    <!--        android:layout_width="@dimen/c_ui_sm_180"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:ellipsize="marquee"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:gravity="center"-->
+    <!--        android:marqueeRepeatLimit="3"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:text="title"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="@dimen/c_ui_font_size_36px"-->
+    <!--        app:typeface="Roboto_medium" />-->
+</RelativeLayout>
