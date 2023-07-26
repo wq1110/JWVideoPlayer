@@ -52,4 +52,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    implementation 'me.jessyan:autosize:1.2.1'
 }

@@ -2,7 +2,9 @@ package com.media.jwvideoplayer.ui;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Build;
+import android.os.Looper;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -24,6 +26,7 @@ import com.media.jwvideoplayer.player.ui.BaseVideoPlayer;
 import com.media.jwvideoplayer.player.ui.VideoView;
 import com.media.jwvideoplayer.viewmodel.VodPlayViewModel;
 
+import me.jessyan.autosize.AutoSizeCompat;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 /**
@@ -43,6 +46,41 @@ public class VodPlayActivity extends MVVMBaseActivity<VodPlayViewModel, LayoutAc
     @Override
     public int getLayoutID() {
         return R.layout.layout_activity_detail;
+    }
+
+    @Override
+    public Resources getResources() {
+        Resources resources = super.getResources();
+        if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+            if (Looper.myLooper() == Looper.getMainLooper()) {
+                AutoSizeCompat.autoConvertDensity(resources, 360, true);
+            } else {
+                //非主线程需要切换到主线程，否者autoConvertDensity会crash.
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        AutoSizeCompat.autoConvertDensity(resources, 360, true);
+                    }
+                });
+            }
+        } else {
+            if (Looper.myLooper() == Looper.getMainLooper()) {
+                AutoSizeCompat.autoConvertDensity(resources, 640, true);
+            } else {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        AutoSizeCompat.autoConvertDensity(resources, 640, true);
+                    }
+                });
+            }
+        }
+        return super.getResources();
+    }
+
+    @Override
+    protected void autoSizeFix(Resources resources) {
+
     }
 
     @Override
