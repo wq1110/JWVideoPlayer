@@ -68,14 +68,10 @@ public interface VideoViewBridge {
      */
     boolean isSurfaceSupportLockCanvas();
 
-    /**
-     * 针对某些内核，缓冲百分比
-     */
+    //针对某些内核，缓冲百分比
     int getBufferedPercentage();
 
-    /**
-     * 是否播放器
-     */
+    //释放播放器
     void releaseMediaPlayer();
 
     void setCurrentVideoHeight(int currentVideoHeight);
@@ -88,57 +84,21 @@ public interface VideoViewBridge {
 
     void setNeedMute(boolean needMute);
 
-    /**
-     * 设置渲染
-     */
+    //设置渲染
     void setDisplay(Surface holder);
 
     void releaseSurface(Surface surface);
 
-//    /**
-//     * 播放中的url是否已经缓存
-//     */
-//    boolean isCacheFile();
-//
-//    /**
-//     * 是否已经完全缓存到本地，主要用于开始播放前判断，是否提示用户
-//     *
-//     * @param cacheDir 缓存目录，为空是使用默认目录
-//     * @param url      指定url缓存
-//     */
-//    boolean cachePreview(Context context, File cacheDir, String url);
-//
-//    /**
-//     * 清除缓存
-//     *
-//     * @param cacheDir 缓存目录，为空是使用默认目录
-//     * @param url      指定url缓存，为空时清除所有
-//     */
-//    void clearCache(Context context, File cacheDir, String url);
-
-    /**
-     * 网络速度
-     */
+    //网络速度
     long getNetSpeed();
 
-    /**
-     * 播放速度修改
-     *
-     * @param speed 播放速度
-     */
+    //播放速度修改
     void setSpeed(float speed, boolean soundTouch);
 
-    /**
-     * 播放速度修改
-     *
-     * @param speed      播放速度
-     * @param soundTouch
-     */
+    //播放速度修改
     void setSpeedPlaying(float speed, boolean soundTouch);
 
-    /**
-     * 获取Rotate选择的flag，目前只有ijk用到
-     */
+    //获取Rotate选择的flag，目前只有ijk用到
     int getRotateInfoFlag();
 
     MediaPlayerListener getMediaPlayerListener();

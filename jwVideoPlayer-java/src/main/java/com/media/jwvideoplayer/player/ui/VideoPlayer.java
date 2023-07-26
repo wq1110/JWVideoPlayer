@@ -216,19 +216,9 @@ public abstract class VideoPlayer extends BaseVideoPlayer {
         message.setData(bundle);
         mHandler.sendMessage(message);
     }
-//
-//    //ass
-//    public void initAss(byte[] content) {
-//        if (assTask != null) assTask.initAss(mAssView, content);
-//    }
-//
-//    public void updateAssTimeStamp(long timeStamp) {
-//        if (assTask != null) assTask.updateAssTimeStamp(timeStamp);
-//    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        if (assTask != null) assTask.destory();
     }
 }

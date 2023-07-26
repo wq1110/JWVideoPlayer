@@ -10,7 +10,6 @@ import com.media.jwvideoplayer.lib.log.Logger;
 import com.media.jwvideoplayer.lib.log.LoggerFactory;
 import com.media.jwvideoplayer.player.listener.ConnectionChangeListener;
 
-
 public class VodMediaReceiver extends BroadcastReceiver {
     private static Logger logger = LoggerFactory.getLogger(VodMediaReceiver.class.getName());
 
@@ -56,7 +55,6 @@ public class VodMediaReceiver extends BroadcastReceiver {
                         newType = ConnectionChangeListener.ConnectionType.MOBILE;
                     }
                 }
-
             }
 
             if(null != listener && newType != type) {

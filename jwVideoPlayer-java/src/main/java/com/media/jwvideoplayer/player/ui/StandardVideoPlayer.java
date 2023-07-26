@@ -750,9 +750,9 @@ public class StandardVideoPlayer extends VideoPlayer implements SeekBar.OnSeekBa
                 hideExtraBox();
                 hideResource();
             } else {
-                showSubtitles();
+//                showSubtitles();
                 showExtraBox();
-                showResource();
+//                showResource();
             }
             showFastRewindIcon();
             showFastForwardIcon();

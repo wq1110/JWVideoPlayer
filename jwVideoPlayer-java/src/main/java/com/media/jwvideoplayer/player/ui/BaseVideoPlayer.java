@@ -18,7 +18,7 @@ import com.media.jwvideoplayer.player.listener.ConnectionChangeListener;
 import com.media.jwvideoplayer.player.receiver.VodMediaReceiver;
 /**
  * Created by Joyce.wang on 2023/3/20.
- * 处理全屏和小屏幕逻辑
+ * 处理网络改变逻辑
  */
 public abstract class BaseVideoPlayer extends VideoControlView {
     private static Logger logger = LoggerFactory.getLogger(BaseVideoPlayer.class.getName());

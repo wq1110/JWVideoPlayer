@@ -16,10 +16,13 @@
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_back.xml" value="0.14895833333333333" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_episode.xml" value="0.14895833333333333" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_fast_forward_10.xml" value="0.14895833333333333" />
+        <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_fast_rewind_10.xml" value="0.3697916666666667" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_feedback.xml" value="0.14895833333333333" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_landscape.xml" value="0.14895833333333333" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_lock.xml" value="0.3697916666666667" />
+        <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_locked.xml" value="0.3697916666666667" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_pause.xml" value="0.3697916666666667" />
+        <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_play.xml" value="0.3697916666666667" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_resources.xml" value="0.14895833333333333" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_subtitles_close.xml" value="0.14895833333333333" />
         <entry key="..\:/project/JWVideoPlayer/jwVideoPlayer-java/src/main/res/drawable/m_play_ic_zoom_in.xml" value="0.21302083333333333" />

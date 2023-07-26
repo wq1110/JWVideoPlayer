@@ -439,8 +439,6 @@ public abstract class BaseVideoManager implements IMediaPlayer.OnPreparedListene
             playerManager.showDisplay(msg);
         }
     }
-
-
     /**
      启动十秒的定时器进行 缓存操作
      */

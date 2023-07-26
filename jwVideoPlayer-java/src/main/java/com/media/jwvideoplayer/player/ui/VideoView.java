@@ -627,8 +627,6 @@ public abstract class VideoView extends MediaTextureRenderView implements MediaP
 
         void onPlayerType(int playerType);
 
-        void onClose();
-
         void onLocaleChange();
 
         void finishActivity();
@@ -637,9 +635,5 @@ public abstract class VideoView extends MediaTextureRenderView implements MediaP
         void onBufferingEnd(IMediaPlayer mp, boolean isPrepare, long bufferingStartTime,
                             long bufferingTime, long prepareFirstBufferingTime,
                             long seekFirstBuffingTime, long startBufferingPosition);
-    }
-
-    public interface Action<T> {
-        void call(T t);
     }
 }

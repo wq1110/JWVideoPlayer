@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="m_play_style_progressBar_custom_drawable" parent="@android:style/Widget.ProgressBar.Small">
-        <item name="android:indeterminateDrawable">@drawable/c_ui_progress_loading_circle_draw</item>
+        <item name="android:indeterminateDrawable">@drawable/m_play_ic_progress_loading_circle_draw</item>
         <item name="android:minWidth">25dp</item>
         <item name="android:minHeight">25dp</item>
         <item name="android:maxWidth">60dp</item>

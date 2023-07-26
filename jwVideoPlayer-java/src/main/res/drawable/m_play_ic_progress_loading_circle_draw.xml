@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/c_ui_pb_loading_icon"
+    android:drawable="@drawable/m_play_ic_pb_loading_icon"
     android:fromDegrees="0"
     android:pivotX="50%"
     android:pivotY="50%"

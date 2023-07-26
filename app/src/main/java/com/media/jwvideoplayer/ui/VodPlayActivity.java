@@ -21,7 +21,6 @@ import com.media.jwvideoplayer.lib.log.LoggerFactory;
 import com.media.jwvideoplayer.mvx.mvvm.MVVMBaseActivity;
 import com.media.jwvideoplayer.player.listener.ConnectionChangeListener;
 import com.media.jwvideoplayer.player.ui.BaseVideoPlayer;
-import com.media.jwvideoplayer.player.ui.StandardVideoPlayer;
 import com.media.jwvideoplayer.player.ui.VideoView;
 import com.media.jwvideoplayer.viewmodel.VodPlayViewModel;
 
@@ -65,7 +64,6 @@ public class VodPlayActivity extends MVVMBaseActivity<VodPlayViewModel, LayoutAc
         mBinding.vodMediaPlayer.hideSubtitles();
         mBinding.vodMediaPlayer.forbidTouch(true);
         mBinding.vodMediaPlayer.setAllowDisplayNextEpisode(true);
-
         mBinding.vodMediaPlayer.setOnEventCallback(playerEventCallback);
 
         //init layoutPlayer layout params
@@ -87,19 +85,19 @@ public class VodPlayActivity extends MVVMBaseActivity<VodPlayViewModel, LayoutAc
     private void resetPlayer() {
         if (mBinding.vodMediaPlayer != null) {
             mBinding.vodMediaPlayer.release();
-            //如果在投屏中，则停止
-//            stopInDlna();
             mBinding.vodMediaPlayer.hideLoadingBox();
             mBinding.vodMediaPlayer.hideTop();
             mBinding.vodMediaPlayer.hideBottom();
             mBinding.vodMediaPlayer.showPlayIcon();
+            mBinding.vodMediaPlayer.hideFastForwardIcon();
+            mBinding.vodMediaPlayer.hideFastRewindIcon();
+            mBinding.vodMediaPlayer.hideRight();
             mBinding.vodMediaPlayer.setTrailer(false);
             mBinding.vodMediaPlayer.setSubtitles("");
             mBinding.vodMediaPlayer.setAllowDisplayNextEpisode(true);
             mBinding.vodMediaPlayer.setOnEventCallback(playerEventCallback);
         }
     }
-
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
@@ -274,11 +272,6 @@ public class VodPlayActivity extends MVVMBaseActivity<VodPlayViewModel, LayoutAc
 
         @Override
         public void onPlayerType(int playerType) {
-
-        }
-
-        @Override
-        public void onClose() {
 
         }
 

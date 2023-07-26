@@ -105,19 +105,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/media_bottom_box"
         android:layout_centerHorizontal="true"
         android:gravity="bottom|center_horizontal"
-        android:layout_above="@+id/media_bottom_box"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/media_subtitles_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/c_ui_sm_10"
             android:gravity="center_horizontal"
             android:textColor="#ff0"
-            android:layout_marginBottom="@dimen/c_ui_sm_10"
-            android:textSize="@dimen/c_ui_font_size_32px"/>
+            android:textSize="@dimen/c_ui_font_size_32px" />
     </LinearLayout>
 
     <!-- 中间触摸提示-->
