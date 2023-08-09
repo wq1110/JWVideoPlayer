@@ -12,12 +12,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/jwVideoPlayer-cache" />
             <option value="$PROJECT_DIR$/jwVideoPlayer-java" />
             <option value="$PROJECT_DIR$/jwVideoPlayer-lib" />
             <option value="$PROJECT_DIR$/jwVideoPlayer-mvx" />
           </set>
         </option>
-        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

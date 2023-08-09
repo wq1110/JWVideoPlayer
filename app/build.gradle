@@ -43,6 +43,7 @@ dependencies {
     implementation project(':jwVideoPlayer-lib')
     implementation project(':jwVideoPlayer-mvx')
     implementation project(':jwVideoPlayer-java')
+    implementation project(':jwVideoPlayer-cache')
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.6.1'

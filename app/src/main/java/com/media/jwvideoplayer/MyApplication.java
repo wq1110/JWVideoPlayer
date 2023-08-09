@@ -3,9 +3,14 @@ package com.media.jwvideoplayer;
 import android.app.Activity;
 import android.content.res.Configuration;
 import androidx.multidex.MultiDexApplication;
+
+import com.media.jwvideoplayer.cache.VideoProxyCacheManager;
+import com.media.jwvideoplayer.cache.utils.StorageUtils;
 import com.media.jwvideoplayer.lib.log.Logger;
 import com.media.jwvideoplayer.lib.log.LoggerFactory;
 import com.media.jwvideoplayer.lib.utils.AppContextUtils;
+
+import java.io.File;
 import java.util.Locale;
 import me.jessyan.autosize.AutoSizeConfig;
 import me.jessyan.autosize.onAdaptListener;
@@ -21,6 +26,7 @@ public class MyApplication extends MultiDexApplication {
         super.onCreate();
         AppContextUtils.init(this);
         initAutoSizeConfig();
+        initVideoProxyCache();
     }
 
     private void initAutoSizeConfig() {
@@ -78,5 +84,17 @@ public class MyApplication extends MultiDexApplication {
         //设置屏幕适配逻辑策略类, 一般不用设置, 使用框架默认的就好
 //                .setAutoAdaptStrategy(new AutoAdaptStrategy())
         ;
+    }
+
+    private void initVideoProxyCache() {
+        File saveFile = StorageUtils.getVideoFileDir(this);
+        if (!saveFile.exists()) {
+            saveFile.mkdir();
+        }
+
+        logger.i("video cache file path: %s", saveFile.getAbsolutePath());
+        VideoProxyCacheManager.Builder builder = new VideoProxyCacheManager.Builder().
+                setFilePath(saveFile.getAbsolutePath());   //缓存存储位置
+        VideoProxyCacheManager.getInstance().initProxyConfig(builder.build());
     }
 }

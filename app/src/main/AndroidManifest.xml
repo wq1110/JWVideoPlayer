@@ -13,7 +13,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:largeHeap="true"
+        android:allowNativeHeapPointerTagging="false"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.JWVideoPlayer">
+        <!--       target30时设置 -->
+        <!--       android:requestLegacyExternalStorage="true"-->
+        <!--       android:allowNativeHeapPointerTagging="false"-->
         <activity
             android:name=".MainActivity"
             android:exported="true">

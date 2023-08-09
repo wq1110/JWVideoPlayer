@@ -6,8 +6,10 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
+
 rootProject.name = "JWVideoPlayer"
 include ':app'
 include ':jwVideoPlayer-java'
 include ':jwVideoPlayer-mvx'
 include ':jwVideoPlayer-lib'
+include ':jwVideoPlayer-cache'
